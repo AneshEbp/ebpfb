@@ -11,6 +11,9 @@ app.use(express.json());
 import userRoutes from "./routes/user.routes.js";
 app.use("/api/auth", userRoutes);
 
+import friendRoutes from "./routes/friend.routes.js";
+app.use("/api/friend", friendRoutes);
+
 import connectdb from "./db/connectdb.js";
 
 app.listen(3000, async () => {
