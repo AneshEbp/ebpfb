@@ -13,7 +13,7 @@ const shareSchema = mongoose.Schema(
   },
   { timestamps: true }
 );
-shareSchema.index({ postId: 1, userId: 1 }, { unique: true });
+shareSchema.index({ postId: 1, userId: 1 });
 const Share = mongoose.model("Share", shareSchema);
 
 export default Share;

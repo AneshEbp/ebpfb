@@ -21,6 +21,12 @@ app.use("/api/post", postRoutes);
 import likeRoutes from "./routes/likes.routes.js";
 app.use("/api/like", likeRoutes);
 
+import shareRoutes from "./routes/share.routes.js";
+app.use("/api/shares", shareRoutes);
+
+import commentRoutes from "./routes/comment.routes.js";
+app.use("/api/comment", commentRoutes);
+
 import connectdb from "./db/connectdb.js";
 app.listen(3000, async () => {
   try {

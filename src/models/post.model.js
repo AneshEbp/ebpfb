@@ -18,10 +18,10 @@ const postSchema = mongoose.Schema(
       type: Number,
       default: 0,
     },
-    haslikeOutlier: {
-      type: Boolean,
-      default: false,
-    },
+    // haslikeOutlier: {
+    //   type: Boolean,
+    //   default: false,
+    // },
     shareCounter: {
       type: Number,
       default: 0,
@@ -30,6 +30,7 @@ const postSchema = mongoose.Schema(
       {
         commentId: { type: mongoose.Schema.ObjectId, ref: "Comment" },
         userId: { type: mongoose.Schema.ObjectId, ref: "User" },
+        content: { type: String },
         userDetails: {
           name: { type: String },
           email: { type: String },
@@ -40,7 +41,7 @@ const postSchema = mongoose.Schema(
       type: Number,
       default: 0,
     },
-    hasCommentOutlier: { type: Boolean, default: false },
+    // hasCommentOutlier: { type: Boolean, default: false },
     postType: {
       type: String,
       enum: ["post", "story"],
