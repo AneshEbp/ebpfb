@@ -10,10 +10,10 @@ import {
 } from "../controllers/post.controller.js";
 const router = express.Router();
 
-router.post("/upload", jwtVerify, upload.single("image"), createPost);
-router.put("/update-post", jwtVerify, updatePost);
+router.post("/upload", jwtVerify, upload.array("images", 10), createPost);
+router.put("/update-post", jwtVerify, upload.array("images", 10), updatePost);
 router.get("/post/:id", getPostDetails);
-router.get("/getAllpost", getAllPost);
+router.get("/getAllpost", jwtVerify, getAllPost);
 router.delete("/remove", jwtVerify, deletePost);
 
 export default router;

@@ -19,6 +19,7 @@ const likesOutlierSchema = mongoose.Schema(
         },
         createdAt: {
           type: Date,
+          default: Date.now,
         },
       },
     ],

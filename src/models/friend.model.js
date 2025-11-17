@@ -4,12 +4,12 @@ const friendSchema = mongoose.Schema({
   userId: {
     type: mongoose.Schema.ObjectId,
     ref: "User",
-    require: true,
+    required: true,
   },
   friendId: {
     type: mongoose.Schema.ObjectId,
     ref: "User",
-    require: true,
+    required: true,
   },
   status: {
     type: String,
